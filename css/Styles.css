@@ -1,0 +1,463 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto Slab  ;
+    src: url(../assets/fonts/RobotoSlab-Medium.ttf);
+}
+
+:root{
+    --padding-container: 10px 0;
+    --color-title: #001a49;
+
+}
+
+h1,h3{
+    font-family: Roboto Slab , sans-serif;
+}
+
+.container{ 
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /*para que se centre verticalmete y un auto para los lados  el container */
+    overflow: hidden; /*todo lo que salgoa del contenedor se esconda*/
+    padding: var(--padding-container);
+        /*background-color: chartreuse;*/
+}
+
+.container-home{
+    max-width: 1200px;
+    margin: auto;
+    background-color: #161616a2;
+}
+
+.hero{
+
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative; /*para que se posicione absolutamente a este contenedor */
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+    /*background-color: blueviolet;*/
+} 
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../assets/images/Guitarrista_fondo.jpg');
+    background-size: cover; /*para que se adapte a la pag*/
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 97%, 0 90%);
+    z-index: -1;
+}
+/* hero home*/
+
+.hero-home{
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    text-align: center;
+    
+}
+
+/* Nav */
+
+
+.nav{
+    --padding-continer:0;
+    height: 100%;
+    display: flex; /*colocar los elemtos uno al lado del otor */
+    align-items: center;
+}
+
+
+.nav__title{
+    font-size: 2.5rem;
+    font-weight: 300; /*fuente mas delgada*/
+    color: #fdff2d;
+}
+
+/*title home*/
+
+    .nav__title-home{
+        font-size: 3rem;
+        font-weight: 300;
+        color: #fff;
+    }
+
+/*items de navegacion*/
+
+
+.nav__link{
+    font-size: 1.5rem;
+    padding: 10%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    gap:4em;
+
+}
+
+
+.nav__items{
+    list-style-type: none; /* Elimina los puntos de la lista */
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.23);
+}
+
+
+.nav__links{
+    color: #fff;
+    text-decoration: none;
+    
+    
+}
+.nav__links:hover{
+    color: #fdff2d;
+    transition: all .25s ease-in-out;
+}
+
+.nav__menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img{
+    display: block;
+    width:30px;
+    
+}
+
+.nav__close{
+    display: var(--show, none);
+}
+
+/*hero container*/
+
+.hero__container{ /* es el contenedor de la section*/
+max-width: 800px;
+margin-top: 120px;
+display: grid;
+--padding-container:0;
+grid-auto-rows: max-content;
+align-content: center;
+gap:1em;
+padding-bottom:100px;
+text-align: center;
+}
+
+.hero__container-home{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #fff;  
+}
+
+.hero__container-home::before{
+content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../assets/images/HomeImage.jpg');
+    background-size: cover; /*para que se adapte a la pag*/
+    clip-path: polygon(0 0, 100% 0, 100% 93%, 50% 97%, 0 93%);
+    z-index: -1;
+}
+
+.hero__title{
+    font-size: 4rem;
+    color: #fdff2d;
+}
+
+.hero__parrafo{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+
+}
+
+.cta{
+    font-size: 1.5rem;
+    display: inline-block;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+.cta:hover{
+    color: black;
+    background-color: #fdff2d;
+    transform: scale(1.1);
+
+}
+
+.image-info{
+    
+    background-image: url(../assets/images/image-musci.jfif);
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 5%;
+    height: 75vh;
+}
+
+.descripcion{
+
+    padding: 80px 0px; 
+    text-align: left;
+    width: 67%;
+    height: 100vh;
+}
+
+.hero__title-descripcion{
+    font-size: 3rem;
+
+    color:#fdff2d;
+
+}
+
+.info{
+    margin-top: 50%;
+    font-size: 4rem;
+    color:#0c0c0c;
+
+}
+.nav__info{
+    color: #070707;
+    text-decoration: none;
+}
+
+.nav__info:hover{
+    color: #fdff2d;
+    transition: all .25s ease-in-out;
+}
+.hero__parrafo-descripcion{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+
+
+/* gallery*/
+/* .hero-gallery{
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    text-align: center;
+    
+    
+} 
+.nav__title-gallery{
+    font-size: 3rem;
+    font-weight: 300;
+    color: #a99bf8;
+    background-color: rgb(233, 231, 231);
+}
+.gallery{
+    padding: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 25rem);
+    gap: 4rem;
+    background-color: #d5dbe7;
+
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+} */
+
+
+/*contact*/
+.container--contact {
+    margin: 0;
+    padding: 0;
+    
+}
+.container-contact{
+    max-width: 1200px;
+    margin: auto;
+    background-color: #000000d0;
+}
+.nav__title-contact{
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fdff2d;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label,input,textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media queries para dispositivos móviles */
+@media  (max-width: 800px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .hero hero-home .gallery {
+        font-size: 55%;
+        padding: 2rem;
+    }
+    .hero__container-home{
+        font-size: 55%;
+        padding: 1rem;
+    }
+    .hero__title{
+        font-size: 4rem;
+    }
+    .hero__parrafo{
+        font-size: 3rem;
+    }
+    
+    .nav__menu{
+        display: block;
+        }
+    .nav__link--menu{
+            position: fixed;
+            background-color: #000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: .7s opacity;
+        }
+        .nav__link--show{
+            --show: block;
+            opacity: 1;
+            pointer-events: unset;
+        }
+        .nav__close{
+        
+        position: absolute;
+        top: 30Px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+                }
+
+    .hero__title{
+        font-size: 2.5rem;
+        
+    }
+    .nav__info{
+        font-size: 3,5rem;
+    }
+
+    .hero__parrafo-descripcion {
+        font-size: 1.7rem;
+    }
+        
+    .container {
+        width: 90%;
+    }
+
+
+    /* Agrega otros ajustes necesarios para dispositivos móviles */
+}
+
+/* Media queries para dispositivos de escritorio */
+@media  (max-width: 468px) {
+    html{
+        font-size: 40%;
+    }
+    .hero hero-home .gallery{
+        font-size: 40%;
+        padding: 1rem;
+    }
+
+    .hero__title{
+        font-size: 4rem;
+    }
+    .hero__parrafo{
+        font-size: 3rem;
+    }
+    .cta{
+        font-size: 2.5rem;
+    }
+    .nav__links{
+        font-size: 100%;
+        
+    }
+    
+    .hero__title-descripcion{
+        margin-left: 15px;
+
+    }
+    .hero__parrafo-descripcion{
+        margin-left: 15px;
+        font-size: 1,5rem;
+        
+    }
+    .nav__info{
+        font-size: 4.5rem;
+        text-align: center;
+
+    }
+    .image-info{
+        margin-top: 50px;
+        width: 90%;
+        height: 60%;
+        
+    }
+.descripcion{
+    padding: 0;
+}
+    
+    /*.Agrega otros ajustes necesarios para dispositivos de escritorio */
+}
